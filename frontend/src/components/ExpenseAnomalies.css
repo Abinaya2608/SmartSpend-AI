@@ -1,0 +1,216 @@
+
+.anomaly-panel {
+    background: #ffffff;
+    border: 1px solid #e8eaf0;
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 24px;
+}
+
+.anomaly-header,
+.anomaly-heading,
+.anomaly-item,
+.anomaly-item-main {
+    display: flex;
+    align-items: center;
+}
+
+.anomaly-header {
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.anomaly-heading {
+    gap: 12px;
+}
+
+.anomaly-icon,
+.anomaly-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d97706;
+    background: #fff7e6;
+    border-radius: 12px;
+    padding: 11px;
+}
+
+.anomaly-heading h3,
+.anomaly-details h4 {
+    margin: 0;
+    color: #202938;
+}
+
+.anomaly-heading p,
+.anomaly-details p {
+    margin: 5px 0 0;
+    color: #7b8494;
+    font-size: 13px;
+}
+
+.anomaly-refresh {
+    border: none;
+    background: #f3f4f6;
+    color: #475569;
+    padding: 9px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.anomaly-refresh:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.anomaly-spinning {
+    animation: anomaly-spin 1s linear infinite;
+}
+
+@keyframes anomaly-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.anomaly-message,
+.anomaly-error {
+    padding: 24px;
+    text-align: center;
+    color: #64748b;
+}
+
+.anomaly-error {
+    color: #dc2626;
+}
+
+.anomaly-error button {
+    display: block;
+    margin: 12px auto 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #f1f5f9;
+    cursor: pointer;
+}
+
+.anomaly-empty {
+    text-align: center;
+    padding: 25px 12px;
+    color: #16a34a;
+}
+
+.anomaly-empty h4 {
+    margin: 12px 0 6px;
+    color: #263244;
+}
+
+.anomaly-empty p {
+    color: #7b8494;
+    font-size: 13px;
+}
+
+.anomaly-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.anomaly-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: #d97706;
+}
+
+.anomaly-item {
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #f0e5d2;
+    background: #fffdf9;
+    border-radius: 12px;
+}
+
+.anomaly-item-main {
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+}
+
+.anomaly-item-icon {
+    flex-shrink: 0;
+    padding: 9px;
+}
+
+.anomaly-details h4 {
+    font-size: 14px;
+}
+
+.anomaly-details span {
+    display: block;
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.anomaly-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.anomaly-amount strong {
+    color: #202938;
+    font-size: 15px;
+}
+
+.anomaly-amount span {
+    color: #7b8494;
+    font-size: 11px;
+}
+
+.anomaly-amount small {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.anomaly-amount small.medium {
+    background: #fff1d6;
+    color: #b45309;
+}
+
+.anomaly-amount small.high {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.anomaly-footer {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #edf0f3;
+    color: #8992a0;
+    font-size: 11px;
+}
+
+@media (max-width: 600px) {
+    .anomaly-panel {
+        padding: 16px;
+    }
+
+    .anomaly-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .anomaly-amount {
+        align-items: flex-start;
+        margin-left: 42px;
+    }
+}
